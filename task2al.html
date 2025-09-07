@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Responsive Navbar Example</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Small optional styling so the example page looks nicer */
+    body { padding-top: 76px; }
+    section { padding: 80px 1.25rem; }
+    .brand-logo { height: 36px; width: 36px; object-fit: cover; border-radius: 6px; margin-right: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <!-- optional small logo -->
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=60" alt="logo"
+             class="brand-logo">
+        MySite
+      </a>
+
+      <!-- Hamburger toggler (appears on small screens) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+              <li><a class="dropdown-item" href="#blog">Blog</a></li>
+              <li><a class="dropdown-item" href="#careers">Careers</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#support">Support</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Optional right side: search + call-to-action -->
+        <form class="d-flex me-2" role="search" onsubmit="event.preventDefault(); alert('Search clicked');">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-light" type="submit">Search</button>
+        </form>
+
+        <a class="btn btn-outline-light" href="#signup">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Example page sections to show how links work -->
+  <main>
+    <section id="home" class="bg-light">
+      <div class="container">
+        <h2>Home</h2>
+        <p>Welcome — this is the home section.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p>About section content...</p>
+      </div>
+    </section>
+
+    <section id="services" class="bg-light">
+      <div class="container">
+        <h2>Services</h2>
+        <p>Services content...</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p>Projects content...</p>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-light">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Contact details...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
